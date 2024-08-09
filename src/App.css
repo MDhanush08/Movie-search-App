@@ -1,5 +1,5 @@
 .main-wrapper{
-  background:linear-gradient(to right,rgb(9, 9, 71),rgb(40, 40, 231),rgb(202, 60, 60));
+  background:linear-gradient(to right,rgb(9, 9, 71),rgb(40, 40, 231));
 }
 
 .main-wrapper header h2{
@@ -67,7 +67,6 @@
 .Detailspara p{
   /* color: aqua; */
   font-weight: 500;
-  font-style:italic;
   /* font-family:'Lobster',cursive; */
   font-family: 'Pacifico', cursive;
 }
