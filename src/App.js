@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Search from "./Search";
@@ -22,6 +22,22 @@ function App() {
     
    }
 
+useEffect(() => {
+    axios
+      .get(`https://www.omdbapi.com/?i=tt3896198&apikey=2ba8f3f4&s=avengers`)
+      .then(res => {
+        if (res.data.Response === 'True') {
+          setState(prevState => ({
+            ...prevState,
+            results: res.data.Search,
+            // error: ''
+          }));
+        }
+      })
+  }, []);
+
+
+  
 
    const handleInput = (event) => {
     const value = event.target.value;
